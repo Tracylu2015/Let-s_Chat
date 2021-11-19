@@ -12,11 +12,11 @@ module.exports.findOneGroup = (req, res) => {
         .catch(err => res.json(err))
 }
 
-module.exports.deleteGroup = (req, res) => {
-    // Group.deleteOne({ _id: req.params.id })
-    //     .then(deleteOne => res.json(deleteOne))
-    //     .catch(err => res.json(err))
-}
+// module.exports.deleteGroup = (req, res) => {
+//     // Group.deleteOne({ _id: req.params.id })
+//     //     .then(deleteOne => res.json(deleteOne))
+//     //     .catch(err => res.json(err))
+// }
 
 module.exports.createGroup = (req, res) => {
     let { users, groupName } = req.body
