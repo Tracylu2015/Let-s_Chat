@@ -21,7 +21,7 @@ services:
     depends_on:
       - mongodb
     environment:
-      MONGODB_URL: mongodb://root:rootroot@mongodb:27017/pirates?authSource=admin
+      MONGODB_URL: mongodb://root:rootroot@mongodb:27017/chats?authSource=admin
 
   client:
     build:
