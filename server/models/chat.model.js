@@ -31,7 +31,11 @@ const GroupSchema = new mongoose.Schema({
         type: String,
         required: [true]
     },
-    users: UserSchema,
+    users: [
+        {
+            type: String
+        }
+    ],
 }, { timestamps: true });
 
 const ChatSchema = new mongoose.Schema({
@@ -47,6 +51,18 @@ const ChatSchema = new mongoose.Schema({
     receiver: {
         type: String,
         required: [true, 'must have a receiver id']
+    }
+}, { timestamps: true });
+
+const GroupChatSchema = new mongoose.Schema({
+    msg: {
+        type: String,
+        required: [true, 'must have a message'],
+        minlength: [1, 'message must be at least 1 character or emoji']
+    },
+    sender: {
+        type: String,
+        required: [true, 'must have a sender id']
     },
     group: GroupSchema
 }, { timestamps: true });
@@ -69,6 +85,8 @@ const FriendSchema = new mongoose.Schema({
 module.exports.User = mongoose.model('User', UserSchema);
 
 module.exports.Chat = mongoose.model('Chat', ChatSchema);
+
+module.exports.GroupChat = mongoose.model('GroupChat', GroupChatSchema);
 
 module.exports.Friend = mongoose.model('Friend', FriendSchema);
 

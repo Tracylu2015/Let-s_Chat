@@ -9,7 +9,6 @@ import 'firebase/analytics'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyDttrCZkJycXUjbLZuW8roA_ZyO4RKyVCs",
   authDomain: "let-schat-e9e2a.firebaseapp.com",

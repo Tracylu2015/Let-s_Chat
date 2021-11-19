@@ -29,13 +29,13 @@ const FriendsList = ({ onFriendClicked }) => {
             <ListGroup as="ul" style={{display:"flex"}}>
                 {friends.map(friend =>
                     <button key={friend._id} onClick={() => onFriendClicked(friend)}>
-                        <ListGroup.Item as="li" key={friend._id}  style={{display:'flex'}}>
+                        <ListGroup.Item as="li" key={friend._id}  style={{display:'flex', alignItems:"center"}}>
                             <div className="avatar">
                                 <div className="mb-8 rounded-full w-14 h-14 ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={friend.avatar} />
                                 </div>
                             </div> &#160; &#160;
-                            <h3 className="mb-5 text-2xl">{friend.name}</h3>
+                            <h2 className="mb-5 text-2xl">{friend.name}</h2>
                             {/* <div className="badge ml-2 success">num</div> */}
                         </ListGroup.Item>
                     </button>

@@ -17,9 +17,9 @@ module.exports = app => {
     app.get('/api/friend/pendinginvite',FriendController.pendingInvite)
     app.put('/api/friend/acceptinvite',FriendController.acceptInvite)
     app.get('/api/groups',GroupController.findAllGroups)
+    app.post('/api/group/create',GroupController.createGroup)
     app.get('/api/chat/findAll',ChatController.findAllChats)
     app.post('/api/chat/create',ChatController.createChat)
-    
-
-    // }
+    app.get('/api/groupchat/findAll',ChatController.findGroupChats)
+    app.post('/api/groupchat/create',ChatController.createGroupChat)
 }
