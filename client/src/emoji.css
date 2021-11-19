@@ -1,0 +1,8 @@
+.emoji-menu {
+    bottom: 110px !important;
+    transform: none !important;
+    position: fixed !important;
+    right: 75px !important;
+    left: auto !important;
+    top: auto !important;
+}

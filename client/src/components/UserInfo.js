@@ -19,12 +19,20 @@ const UserInfo = () => {
     }, context.currentUser == null ? [] : [context.currentUser.uid])
 
     return (
-        <div>
-            <h4>User Information</h4>
-            <p><b>Avatar:</b> <img src={user ? user.avatar : ''} width="80px" /></p>
-            <p><b>Name:</b> {user ? user.name : ''}</p>
-            <p><b>Email: </b>{user ? user.email : ''}</p>
-        </div>
+        <>
+            <div className="card text-center shadow-xl" style={{width:"60%"}}>
+                <div style={{paddingTop:"20px",margin: "auto",display: "block"}}>
+                    <img src={user ? user.avatar : ''} width="120px" className="rounded-xl" />
+                </div>
+                <div className="card-body">
+                    <p><b>Name:</b> {user ? user.name : ''}</p>
+                    <p><b>Email: </b>{user ? user.email : ''}</p>
+                    <div className="justify-center card-actions" style={{marginTop:"-5px"}} >
+                        <button className="btn btn-primary btn-active">More info</button>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 

@@ -8,19 +8,19 @@ const UserButtons = ({onSelect}) => {
         <div>
             <ListGroup as="ul">
                 <ListGroup.Item as="li">
-                    <button onClick={()=>onSelect(0)}>User Information</button>
+                    <button className="btn btn-block btn-info" onClick={()=>onSelect(0)}>User Information</button>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    <button onClick={()=>onSelect(2)}>Show Invitations</button>
+                    <button className="btn btn-block btn-info" onClick={()=>onSelect(2)}>Show Invitations</button>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    <button onClick={()=>onSelect(1)}>Edit User Information</button>
+                    <button className="btn btn-block btn-info" onClick={()=>onSelect(1)}>Edit User Information</button>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    <button onClick={()=>onSelect(4)}>Manage Friends</button>
+                    <button className="btn btn-block btn-info" onClick={()=>onSelect(4)}>Manage Friends</button>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    <button onClick={()=>onSelect(3)}>Add More Friends</button>
+                    <button className="btn btn-block btn-info" onClick={()=>onSelect(3)}>Add More Friends</button>
                 </ListGroup.Item>
             </ListGroup>
         </div>

@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <div className="vh-100 d-flex flex-column ">
-        <NavBar />
+        <NavBar/>
         <Switch>
           <Route path='/' exact>
             <MainPage/>
@@ -27,7 +27,7 @@ function App() {
             <RegisterPage />
           </Route>
           <Route path='/user/account' exact>
-            <UserAccountPage />
+            <UserAccountPage/>
           </Route>
         </Switch>
         </div>
